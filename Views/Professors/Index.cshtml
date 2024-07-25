@@ -1,0 +1,54 @@
+﻿@model List<Professor>
+@{
+}
+<h2><i class="bi bi-person"></i> Professors</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Professors" asp-action="Create"><i class="bi bi-plus-lg"></i>New Professor</a>
+    </div>
+    <div class="col">
+
+    </div>
+
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>Name</th>
+            <th>Course</th>
+            <th>Update</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Class
+                </td>
+                <td style="white-space:nowrap">
+                  <a class="btn btn-primary btn-sm mb-5" asp-controller="Professors" asp-action="Edit" asp-route-id="@item.ProfessorId">Edit</a>
+                </td>
+                   <td>
+                    <a class="btn btn-primary btn-sm mb-5" asp-controller="Professors" asp-action="Details" asp-route-id="@item.ProfessorId">Details</a>
+
+                </td>
+                   <td>
+                    <a class="btn btn-danger btn-sm mb-5" asp-controller="Professors" asp-action="Delete" asp-route-id="@item.ProfessorId">Delete</a>
+                   </td>
+            </tr>
+        }
+    </tbody>
+   
+</table>

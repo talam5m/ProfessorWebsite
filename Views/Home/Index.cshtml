@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello There!</h1>
+    <p> <i class="bi bi-envelope-open-heart-fill"></i> Tala's Project.</p>
+</div>
+<style>
+    .button {
+      
+        transition-duration:0.4s;
+        background-color:white;
+        color:black;
+        border: 2px solid #4CAF50;
+        padding:16px 36px;
+        text-align: center;
+        border-radius:4px;
+        display: inline-block;
+        font-size:16px ;
+        margin: 4px 2px;
+        cursor:pointer;
+    }
+
+    .button:hover{
+        background-color: #4CAF50;
+        color:white;
+    }
+
+    .div1 {
+        text-align:center;
+    }
+
+</style>
+<hr /> 
+
+<div class="div1" >
+    <h5>please click on the button to start count!</h5>
+    <h1 id="add">0</h1>
+    <button class="button" onclick="AddButton()">click!</button>
+
+    <script type="text/javascript">
+
+        function AddButton() {
+            var add = document.getElementById("add");
+            var value = parseInt(add.innerHTML);
+            value++;
+            console.log(value);
+            add.innerHTML = value;
+        }
+    </script>
+
+</div>
+
+  

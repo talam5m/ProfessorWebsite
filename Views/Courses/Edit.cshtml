@@ -1,0 +1,22 @@
+﻿@model CourseDto
+@{
+}
+
+<h1>Edit Course</h1>
+<form method="post" action="Edit" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Professor</label>
+
+        <select class="form-control" asp-for="ProfessorId" asp-items="@(new SelectList(Model.Professors, "ProfessorId", "Name"))">
+           
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary" asp-action="Edit" asp-controller="Courses">Edit</button>
+    <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+</form>
+
+
