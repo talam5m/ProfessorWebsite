@@ -22,6 +22,7 @@ namespace ProfessorWebsite.Controllers
 
         public async Task<IActionResult> Index()
         {
+            //
             // int pageSize = 10; // Number of items per page
             // var pageCount = _context.Courses.Count() / pageSize;
            // int pageNumber = (page ?? 1);
